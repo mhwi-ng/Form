@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đặt Vé Xem Phim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2a1a1;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgb(223, 211, 220);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .extra-img img {
+            width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for radio buttons */
+        .radio-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .radio-group p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .radio-group label {
+            font-size: 16px;
+            margin: 0 10px; /* Adjusted margin for spacing */
+            display: inline-block; /* Change to inline-block */
+            position: relative;
+        }
+
+        .radio-group input[type="radio"] {
+            display: none;
+        }
+
+        /* Style for custom radio buttons */
+        .radio-group input[type="radio"] + span {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .radio-group input[type="radio"]:checked + span {
+            background-color: #4CAF50;
+            color: white;
+            border-color: #45a049;
+        }
+
+        .radio-group input[type="radio"] + span:hover {
+            background-color: #ddd;
+        }
+
+        /* Style for the message display */
+        .message {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            display: none; /* Initially hidden */
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #fff; /* Màu nền trắng */
+            border: 2px solid #4CAF50; /* Viền màu xanh */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+        }
+
+        /* Style for the textarea */
+        textarea {
+            height: 100px; /* Đặt chiều cao cho khung ghi chú */
+            resize: vertical; /* Cho phép người dùng thay đổi kích thước chiều cao */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="booking-form">
+        <div class="extra-img">
+            <img src="https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/455063239_909173724576961_8500371978270030335_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHusvZE9oUsI3C_vLVrnH5XhfGOh2riGYeF8Y6HauIZh5Lr-2NopHe7OZ7tx4ZU0iIR7HEC8BMUtba1eAw-SCra&_nc_ohc=I0eyAtdp02wQ7kNvgFGwePG&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=A72WANP9Ch5eaBn1fpkTPfJ&oh=00_AYB0em12Kh6enQnoeUSzz6N4_a1Cm5j071QlktndwKJdJg&oe=66F89820" alt="Poster Phim">
+        </div>
+
+        <h1>HELLO NGƯỜI MÀ TUI THẤY DỄ THƯƠNG NHẤT TRÊN ĐỜI</h1>
+
+        <div class="extra-img">
+            <img src="https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.15752-9/459471623_541571825005872_252296189552711397_n.png?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEKr8UmtvGbSph3q3AgKYFdIoIH8IZ31IYiggfwhnfUhnb6VditBjLfER01SqTEQbOu3C1z9zBW-dOkBz0qYj3b&_nc_ohc=UVZuIOXpjf8Q7kNvgFNv2Hz&_nc_ht=scontent.fsgn5-5.fna&oh=03_Q7cD1QEX92cUS7SyRhzIfElxvisTHv4z3r2xf-Yruo3WDjlkag&oe=671A3F6C" alt="Ảnh mới thêm">
+        </div>
+
+        <div class="radio-group">
+            <p>Đi xem phim với anh hok</p>
+            <label>
+                <input type="radio" id="yes" name="goToMovie" value="Có" required>
+                <span>Dạ cóooooo</span>
+            </label>
+            <label>
+                <input type="radio" id="no" name="goToMovie" value="Không" required>
+                <span>Mơ hảaaaa</span>
+            </label>
+        </div>
+
+        <div class="message" id="message"></div> <!-- Thêm div để hiển thị thông điệp -->
+        
+        <form action="#" method="post">
+            <label for="birthdate">Chỉ là anh muốn biết trăng ngày em sinh có đẹp honggg hehe:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="date">Ngày em muốn xem ạ!?:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Em muốn coi thời gian nào nà (khuya anh cũng dứt):</label>
+            <select id="time" name="time" required>
+                <option value="19h00">7:00 PM</option>
+                <option value="20h00">08:00 PM</option>
+                <option value="21h00">09:00 PM</option>
+                <option value="22h00">10:00 PM</option>
+            </select>
+
+            <label for="notes">Em muốn nhắn gì với ảnh hong:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Bất cứ thứ gì về trò mèo của ảnh..."></textarea>
+
+            <button type="submit">Do anh làm lẹ nên kh hoàn chỉnh được nên em chụp màn hình lại nhee hehe</button>
+        </form>
+    </div>
+
+    <script>
+        // Lắng nghe sự thay đổi trên radio buttons
+        const radios = document.querySelectorAll('input[name="goToMovie"]');
+        const messageDiv = document.getElementById('message');
+
+        radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'Có') {
+                    messageDiv.innerText = "Anh biết em sẽ chọn có mà ;) ";
+                } else {
+                    messageDiv.innerText = "Em bị dính bẫy rồi mơ hả = dạ có =))))";
+                }
+                messageDiv.style.display = 'block'; // Hiển thị thông điệp
+            });
+        });
+    </script>
+
+</body>
+</html>
